@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Library Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="view_books.html">View Books</a></li>
+                <li><a href="trans.html">Transactions</a></li>
+                <li><a href="mantain.html">Maintenance</a></li>
+                <li><a href="add_membership.html">Add Membership</a></li>
+                <li><a href="update_membership.html">Update Membership</a></li>
+                <li><a href="add_book.html">Add Book</a></li>
+                <li><a href="update_book.html">Update Book</a></li>
+                <li><a href="user_management.html">User Management</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+     <form onsubmit="return validateAddMembershipForm()">
+     <label for="membership_duration">Membership Duration:</label><br>
+     <input type="radio" id="six_months" name="membership_duration" value="6"> 6 Months<br>
+     <input type="radio" id="one_year" name="membership_duration" value="12"> 1 Year<br>
+     <input type="radio" id="two_years" name="membership_duration" value="24"> 2 Years<br>
+     <input type="submit" value="Add Membership">
+     </form>
+    
+     <form onsubmit="return validateAddBookForm()">
+     <label for="book_name">Book Name:</label><br>
+     <input type="text" id="book_name" name="book_name"><br>
+     <label for="author_name">Author Name:</label><br>
+     <input type="text" id="author_name" name="author_name"><br>
+     <input type="submit" value="Search Book">
+     </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Library Management System</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

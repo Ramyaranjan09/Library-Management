@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Maintenance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin: 20px 0;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="number"], input[type="date"], select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .section-title {
+            color: #333;
+            margin-top: 40px;
+            font-size: 24px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Library Maintenance</h1>
+
+        <!-- Add Book Form -->
+        <div class="section-title">Add New Book</div>
+        <form action="/add_book" method="POST">
+            <div class="form-group">
+                <label for="book_title">Book Title</label>
+                <input type="text" id="book_title" name="book_title" required>
+            </div>
+
+            <div class="form-group">
+                <label for="author">Author</label>
+                <input type="text" id="author" name="author" required>
+            </div>
+
+            <div class="form-group">
+                <label for="publication_year">Publication Year</label>
+                <input type="number" id="publication_year" name="publication_year" required>
+            </div>
+
+            <div class="form-group">
+                <label for="isbn">ISBN</label>
+                <input type="text" id="isbn" name="isbn" required>
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category</label>
+                <input type="text" id="category" name="category" required>
+            </div>
+
+            <button type="submit">Add Book</button>
+        </form>
+
+        <!-- Update Book Form -->
+        <div class="section-title">Update Book Details</div>
+        <form action="/update_book" method="POST">
+            <div class="form-group">
+                <label for="book_id_update">Book ID</label>
+                <input type="number" id="book_id_update" name="book_id_update" required>
+            </div>
+
+            <div class="form-group">
+                <label for="updated_title">Updated Book Title</label>
+                <input type="text" id="updated_title" name="updated_title">
+            </div>
+
+            <div class="form-group">
+                <label for="updated_author">Updated Author</label>
+                <input type="text" id="updated_author" name="updated_author">
+            </div>
+
+            <div class="form-group">
+                <label for="updated_year">Updated Publication Year</label>
+                <input type="number" id="updated_year" name="updated_year">
+            </div>
+
+            <div class="form-group">
+                <label for="updated_category">Updated Category</label>
+                <input type="text" id="updated_category" name="updated_category">
+            </div>
+
+            <button type="submit">Update Book</button>
+        </form>
+
+        <!-- Remove Book Form -->
+        <div class="section-title">Remove Book</div>
+        <form action="/remove_book" method="POST">
+            <div class="form-group">
+                <label for="book_id_remove">Book ID</label>
+                <input type="number" id="book_id_remove" name="book_id_remove" required>
+            </div>
+
+            <button type="submit">Remove Book</button>
+        </form>
+
+    </div>
+
+</body>
+</html>
